@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(350px, 650px);
+    grid-template-rows: repeat(2, 400px);
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 20vh;
+}
+.container{
+    padding: 2.5rem;
+    text-align: center;
+    color: #323232;
+    border-radius: 1rem;
+    box-shadow: 0px 25px 25px 10px rgba(0, 0, 0, 0.75),
+                100px 100px 100px 40px rgba(0, 0, 0, 0.25);
+}
+.title,.inserido{
+    font-size: 3rem;
+    margin-bottom: 25px;
+    color: #323232;
+}
+form{
+    text-align: start;
+    font-size: 1.2rem;
+}
+#git{
+    margin-right: 40%;
+}
+form input{
+    margin-bottom: 25px;
+}
+input[type=checkbox]{
+     /* Double-sized Checkboxes */
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    transform: scale(2);
+}
+form textarea{
+    width: 100%;
+    background-color: #515151;
+    color: #f1f1f1;
+    padding: 1rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+form button{
+    padding: 0.50rem 1.5rem;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+.qrcode,.inserido{
+    justify-self: center;
+}
+.cancel{
+    background: tomato;
+}
+.cancel:hover{
+    background: white;
+    color: tomato;
+    border: 1px solid tomato;
+}
+.create{
+    background: rgb(3, 238, 3);
+}
+.create:hover{
+    background: white;
+    border: 1px solid rgb(3, 238, 3);
+    color: rgb(3, 238, 3);
+}
+.print{
+    background: rgb(3, 164, 238);
+}
+.print:hover{
+    background: white;
+    color: rgb(3, 164, 238);
+    border: 1px solid rgb(3, 164, 238);
+}
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    .qrcode, .qrcode *,.inserido {
+      visibility: visible;
+    }
+    .qrcode {
+      position: fixed;
+      left: 0;
+      top: 10%;
+    }
+    .inserido {
+        font-size: 1.2rem;
+        position: fixed;
+        left: 0;
+        top: 0;
+      }
+  }
